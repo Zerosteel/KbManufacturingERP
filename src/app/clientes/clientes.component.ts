@@ -5,5 +5,10 @@ import {Component} from '@angular/core';
     templateUrl:'./clientes.component.html'
 })
 export class ClientesComponent{
-    
+     lista : string[] = ["conejo", "gallina" , "perro" ,"guacamaya"];
+     borrado: string='';
+     borrar() {
+         console.log("borrando...")
+         this.borrado = this.lista.shift() || '';
+     }
 }
