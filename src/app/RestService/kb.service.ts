@@ -1,7 +1,22 @@
+import { HttpClient } from '@angular/common/http'
 import{Injectable} from '@angular/core'
 
-@Injectable(){
+import { Observable, throwError } from 'rxjs';
+import { catchError, retry } from 'rxjs/operators';
+import { Inventario } from '../interfaces/interfaces';
+
+
+
+@Injectable()
     export class KbService{
-        nombre:string = "Roberto"
+        constructor(private http:HttpClient){}
+        
+        getClientes(){
+            const path='192.168.100.50:3000/inventario';
+            return this.http.get<Inventario[]>(path);
+        }
+
+
+
+
     }
-}

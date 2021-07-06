@@ -4,7 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { ContadorModule } from './contador/contador.module';
-
+import { KbService } from './RestService/kb.service';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -13,10 +14,11 @@ import { ContadorModule } from './contador/contador.module';
   ],
   imports: [
     BrowserModule,
-    ContadorModule
+    ContadorModule,
+    HttpClientModule
     
   ],
-  providers: [],
+  providers: [KbService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
