@@ -3,18 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { ClientesComponent } from './clientes/clientes.component';
-import { ContadorComponent } from './contador.component';
+import { ContadorModule } from './contador/contador.module';
+import { KbService } from './RestService/kb.service';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContadorComponent,
     ClientesComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ContadorModule,
+    HttpClientModule
+    
   ],
-  providers: [],
+  providers: [KbService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
