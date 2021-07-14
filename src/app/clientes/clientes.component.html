@@ -1,15 +1,44 @@
-<!--h1>Hola Clientes</h1>
-
-<table>
-    <tr *ngFor="let item of lista">
-        <td>{{item}}</td>
-    </tr>
-
     
-</table>    
+    <h1>CLIENTES KBManufacturing</h1>
+    <button (click)="mostrarClientes()">Mostrar Clientes</button>
+    <br>
+    <hr>
+    <table *ngIf=" clientes.length > 0">
+        <tr>
+            <th *ngFor="let titles of cliente | keyvalue">
+                {{titles.key|titlecase}}
+            </th>
+        </tr>
+        <tr *ngFor="let cli of clientes">
+            <td >{{cli.nombre}}</td>
+            <td >{{cli.rfc}}</td>
+            <td >{{cli.direccion}}</td>
+            <td >{{cli.telefono}}</td>
+            <td >{{cli.contacto}}</td>
+            <td >{{cli.correo_contacto}}</td>
+        </tr>
+    </table>
 
-<button (click)="borrar()" >Borrar</button>
+    <h2>Agregar producto</h2>
+    <hr>
 
-<span>{{borrado}}</span-->
+    <form (ngSubmit) = "guardarCliente()">
 
-    <button (click)="mostrarInventario()">Mostrar Clientes</button>
+        <input name="nombre"          [(ngModel)]="cliente.nombre"           type="text"   placeholder="nombre">     <br>
+        <input name="rfc"             [(ngModel)]="cliente.rfc"              type="text"   placeholder="rfc"><br>
+        <input name="direccion"       [(ngModel)]="cliente.direccion"        type="text" placeholder="direccion">   <br>
+        <input name="telefono"        [(ngModel)]="cliente.telefono"         type="text" placeholder="telefono">   <br>
+        <input name="contacto"        [(ngModel)]="cliente.contacto"         type="text"   placeholder="contacto"><br>
+        <input name="correo_contacto" [(ngModel)]="cliente.correo_contacto"  type="text"   placeholder="correo de contacto"><br>
+        <button type="submit">Agregar</button>
+        
+    </form>
+
+   <!--  <button (click)="imprimir()">POST THIS S...</button>
+
+    <ul>
+        <li *ngFor="let item of documento | keyvalue"> {{item.value}}</li>
+    </ul>
+ -->
+    <!-- <button (click)="posteamEsta()">POST THIS S...</button> -->
+    
