@@ -1,4 +1,4 @@
-* {
+/* * {
     font-family: Helvetica, Arial, sans-serif;
     font-weight: 200;
     margin:10px;
@@ -41,9 +41,16 @@
     padding: 1px;
   }
 
-  table, th, td {
+  */ table, th, td {
     border: 1px solid black;
+  } 
+  th{
+    background-color: cornflowerblue;
   }
   input{
-    margin: 2px;
+    margin:2px;
   }
+  /*
+  input{
+    margin: 2px;
+  } */

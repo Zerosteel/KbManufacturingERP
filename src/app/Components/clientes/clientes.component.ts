@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import { KbService } from '../RestService/kb.service';
-import {Inventario} from '../interfaces/Inventario.interface'
-import { Clientes } from '../interfaces/clientes.interface';
+import { KbService } from '../../RestService/kb.service';
+import {Inventario} from '../../interfaces/Inventario.interface'
+import { Clientes } from '../../interfaces/clientes.interface';
 
 
 @Component({

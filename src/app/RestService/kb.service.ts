@@ -5,6 +5,8 @@ import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { Clientes } from '../interfaces/clientes.interface';
 import { Inventario } from '../interfaces/Inventario.interface';
+import { OrdenesCompra } from '../interfaces/ordenesC.interface';
+import { Requerimientos } from '../interfaces/requerimientos.interface';
 
 
 
@@ -14,6 +16,8 @@ import { Inventario } from '../interfaces/Inventario.interface';
 
         pathClientes='/api/clientes'
         pathInventario='/api/inventario';
+        pathRequerimiento='/api/requerimientos'
+        pathOrdenesCompra='/api/ordenesCompra'
         
         getClientes():Observable<Clientes[]>{
             
@@ -31,6 +35,22 @@ import { Inventario } from '../interfaces/Inventario.interface';
 
         putInventario(producto:Inventario):Observable<any>{
             return this.http.post(this.pathInventario,producto);
+        }
+
+        getRequerimiento():Observable<Requerimientos[]>{
+            return this.http.get<Requerimientos[]>(this.pathRequerimiento);
+        }
+
+        putRequerimiento(requerimiento:Requerimientos):Observable<any>{
+            return this.http.post(this.pathRequerimiento,requerimiento)
+        }
+
+        getOrdenes():Observable<OrdenesCompra[]>{
+            return this.http.get<OrdenesCompra[]>(this.pathOrdenesCompra)
+        }
+
+        putOrdenes(ordenesCompra:OrdenesCompra):Observable<any>{
+            return this.http.post(this.pathOrdenesCompra,ordenesCompra)
         }
 
     }

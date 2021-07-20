@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import { KbService } from '../RestService/kb.service';
-import {Inventario} from '../interfaces/Inventario.interface'
-
+import { KbService } from '../../RestService/kb.service';
+import {Inventario} from '../../interfaces/Inventario.interface'
 
 @Component({
     selector:"app-inventario",
