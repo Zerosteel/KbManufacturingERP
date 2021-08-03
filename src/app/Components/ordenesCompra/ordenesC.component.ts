@@ -13,7 +13,7 @@ export class OrdenesCompraComponent{
 
     public arrOrdenesCompra:OrdenesCompra[]=[];
 
-    ordenesCompra:OrdenesCompra={
+    ordenesCompra:OrdenesCompra={        
         line:0,
         partNumber:0,
         description:"",
@@ -42,8 +42,12 @@ export class OrdenesCompraComponent{
         return 0
     }
 
-    generarODT(linea:any){
-        console.log(linea.line )
+    generarODT(ord:any){
+        console.log(ord._id)
+        this.kbService.putOrdenesTrabajo(ord).subscribe(res =>{
+            console.log('Res',res)
+        })
+        //TODO enviar cliente- item y cantidad para generar una orden de trabajo
     }
 
 
