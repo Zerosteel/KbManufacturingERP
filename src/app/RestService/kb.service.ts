@@ -18,6 +18,11 @@ import { Requerimientos } from '../interfaces/requerimientos.interface';
         pathInventario='/api/inventario';
         pathRequerimiento='/api/requerimientos'
         pathOrdenesCompra='/api/ordenesCompra'
+        pathOrdenesTrabajo='/api/ordenesTrabajo'
+
+        putOrdenesTrabajo(ordenesCompra:OrdenesCompra):Observable<any>{
+            return this.http.post(this.pathOrdenesCompra,ordenesCompra);
+        }
         
         getClientes():Observable<Clientes[]>{
             

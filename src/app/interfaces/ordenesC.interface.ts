@@ -1,5 +1,5 @@
-export interface OrdenesCompra{
-    line:number;
+export interface OrdenesCompra{    
+    line:Number;
     partNumber:Number;
     description:String;
     deliveryDateTime:String;
