@@ -1,0 +1,30 @@
+<h1>Inventario </h1>
+<button (click)="mostrarInventario()">Mostrar Inventario</button>
+    <br>
+    <hr>
+    <table *ngIf=" inventario.length > 0">
+        <tr>
+            <th *ngFor="let titles of producto | keyvalue">
+                {{titles.key|titlecase}}
+            </th>
+        </tr>
+        <tr *ngFor="let inv of inventario">
+            <td >{{inv.nombre}}</td>
+            <td >{{inv.descripcion}}</td>
+            <td >{{inv.material}}</td>
+            <td >{{inv.cantidad}}</td>
+        </tr>
+    </table>
+
+    <h2>Agregar producto</h2>
+    <hr>
+
+    <form (ngSubmit) = "guardarInventario()">
+
+        <input name="nombre"      [(ngModel)]="producto.nombre"       type="text"   placeholder="nombre">     <br>
+        <input name="descripcion" [(ngModel)]="producto.descripcion"  type="text"   placeholder="descripcion"><br>
+        <input name="cantidad"    [(ngModel)]="producto.cantidad"     type="number" placeholder="cantidad">   <br>
+        <input name="material"    [(ngModel)]="producto.material"     type="text" placeholder="material">   <br>
+        <button type="submit">Agregar</button>
+        
+    </form>

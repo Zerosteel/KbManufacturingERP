@@ -1,0 +1,42 @@
+<h1>Ordenes de Compra</h1>
+<button (click)="mostrarOrdenes()">Mostrar Ordenes de Compra</button>
+    <br>
+    <hr>
+    <table *ngIf=" arrOrdenesCompra.length > 0">
+        <tr>
+            <th *ngFor="let titles of ordenesCompra | keyvalue:returnZero">
+                {{titles.key|titlecase}}
+            </th>
+            <th>Orden De Trabajo</th>
+            
+        </tr>
+        <tr *ngFor="let ord of arrOrdenesCompra">
+            <td >{{ord.line}}            </td>
+            <td >{{ord.partNumber}}      </td>
+            <td >{{ord.description}}     </td>
+            <td >{{ord.deliveryDateTime}}</td>
+            <td >{{ord.quantity}}        </td>
+            <td >{{ord.uom}}             </td>
+            <td >{{ord.unitPrice}}       </td>
+            <td >{{ord.amount}}          </td>
+            <td><button (click)="generarODT(ord)">Generar</button></td>
+            
+        </tr>
+    </table>
+
+    <h2>Agregar producto</h2>
+    <hr>
+
+    <form (ngSubmit) = "guardarOrden()">
+
+        <input name="line"            [(ngModel)]="ordenesCompra.line"             type="number"   placeholder="line">             <br>
+        <input name="partNumber"      [(ngModel)]="ordenesCompra.partNumber"       type="number"   placeholder="partNumber">       <br>
+        <input name="description"     [(ngModel)]="ordenesCompra.description"      type="text"     placeholder="description">      <br>
+        <input name="deliveryDateTime"[(ngModel)]="ordenesCompra.deliveryDateTime" type="text"     placeholder="deliveryDateTime"> <br>
+        <input name="quantity"        [(ngModel)]="ordenesCompra.quantity"         type="number"   placeholder="quantity">         <br>
+        <input name="uom"             [(ngModel)]="ordenesCompra.uom"              type="text"     placeholder="UOM">              <br>
+        <input name="unitPrice"       [(ngModel)]="ordenesCompra.unitPrice"        type="number"   placeholder="unitPrice">        <br>
+        <input name="amount"          [(ngModel)]="ordenesCompra.amount"           type="number"   placeholder="amount">           <br>
+        <button type="submit">Agregar</button>
+        
+    </form>

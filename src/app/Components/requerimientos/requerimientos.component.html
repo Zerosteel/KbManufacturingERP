@@ -1,0 +1,26 @@
+<h1>Requerimientos</h1>
+    <button (click)="solicitarRequerimientos()">Mostrar Requerimientos</button>
+    <br>
+    <hr>
+    <table *ngIf=" requerimientos.length > 0">
+        <tr>
+            <th *ngFor="let titles of requerimiento  | keyvalue">
+                {{titles.key|titlecase}}
+            </th>
+        </tr>
+        <tr *ngFor="let req of requerimientos">
+            <td >{{req.area}}</td>
+            <td >{{req.descripcion}}</td>
+            <td >{{req.cantidad}}</td>
+        </tr>
+    </table>
+<h2>Agregar requerimiento</h2>
+
+<form (ngSubmit) = "guardarRequerimiento()">
+
+    <input name="area"         [(ngModel)]="requerimiento.area"         type="text" placeholder="Area">     <br>
+    <input name="descripcion"  [(ngModel)]="requerimiento.descripcion"  type="text" placeholder="Descripcion"><br>
+    <input name="cantidad"     [(ngModel)]="requerimiento.cantidad"     type="number" placeholder="Cantidad">   <br>
+    <button type="submit">Agregar</button>
+    
+</form>
