@@ -20,8 +20,8 @@ import { Requerimientos } from '../interfaces/requerimientos.interface';
         pathOrdenesCompra='/api/ordenesCompra'
         pathOrdenesTrabajo='/api/ordenesTrabajo'
 
-        putOrdenesTrabajo(ordenesCompra:OrdenesCompra):Observable<any>{
-            return this.http.post(this.pathOrdenesCompra,ordenesCompra);
+        putOrdenesTrabajo(ordId:string):Observable<any>{
+            return this.http.post(this.pathOrdenesTrabajo,{"ordId":ordId});
         }
         
         getClientes():Observable<Clientes[]>{
