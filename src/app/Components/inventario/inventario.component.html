@@ -16,15 +16,15 @@
         </tr>
     </table>
 
-    <h2>Agregar producto</h2>
+    <h2>Agregar Producto</h2>
     <hr>
 
-    <form (ngSubmit) = "guardarInventario()">
+    <form class="formaProducto" (ngSubmit) = "guardarInventario()">
 
-        <input name="nombre"      [(ngModel)]="producto.nombre"       type="text"   placeholder="nombre">     <br>
-        <input name="descripcion" [(ngModel)]="producto.descripcion"  type="text"   placeholder="descripcion"><br>
-        <input name="cantidad"    [(ngModel)]="producto.cantidad"     type="number" placeholder="cantidad">   <br>
-        <input name="material"    [(ngModel)]="producto.material"     type="text" placeholder="material">   <br>
-        <button type="submit">Agregar</button>
+        <label for="nombre">nombre:</label> <input id="nombre" name="nombre"      [(ngModel)]="producto.nombre"       type="text"   placeholder="nombre">     <br>
+        <label for="descripcion">descripcion:</label> <input id="descripcion" name="descripcion" [(ngModel)]="producto.descripcion"  type="text"   placeholder="descripcion"><br>
+        <label for="cantidad">cantidad:</label> <input id="cantidad" name="cantidad"    [(ngModel)]="producto.cantidad"     type="number" placeholder="cantidad">   <br>
+        <label for="material">material:</label> <input id="material" name="material"    [(ngModel)]="producto.material"     type="text" placeholder="material">   <br>
+        <label for="agregar"></label><button id="agregar" type="submit">Agregar</button>
         
     </form>

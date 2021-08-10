@@ -4,6 +4,7 @@ import { ClientesComponent } from './Components/clientes/clientes.component';
 import { InventarioComponent } from './Components/inventario/inventario.component';
 import { OrdenesCompraComponent } from './Components/ordenesCompra/ordenesC.component';
 import { RequerimientosComponent } from './Components/requerimientos/requerimientos.component';
+import { PiezasComponent } from './Components/piezas/piezas.component';
 
 const routes:Routes = [
     /* {
@@ -42,6 +43,11 @@ const routes:Routes = [
     {
         path:'ordenesCompra',
         component:OrdenesCompraComponent
+    },
+
+    {
+        path:'piezas',
+        component:PiezasComponent
     },
 
     {

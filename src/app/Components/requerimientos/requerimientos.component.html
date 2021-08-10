@@ -14,13 +14,13 @@
             <td >{{req.cantidad}}</td>
         </tr>
     </table>
-<h2>Agregar requerimiento</h2>
+<h2>Agregar Requerimiento</h2>
 
-<form (ngSubmit) = "guardarRequerimiento()">
+<form class="formaProducto" (ngSubmit) = "guardarRequerimiento()">
 
-    <input name="area"         [(ngModel)]="requerimiento.area"         type="text" placeholder="Area">     <br>
-    <input name="descripcion"  [(ngModel)]="requerimiento.descripcion"  type="text" placeholder="Descripcion"><br>
-    <input name="cantidad"     [(ngModel)]="requerimiento.cantidad"     type="number" placeholder="Cantidad">   <br>
-    <button type="submit">Agregar</button>
+    <label for="area">area:</label><input  id="area" name="area"         [(ngModel)]="requerimiento.area"         type="text" placeholder="Area">     <br>
+    <label for="descripcion">descripcion:</label><input  id="descripcion" name="descripcion"  [(ngModel)]="requerimiento.descripcion"  type="text" placeholder="Descripcion"><br>
+    <label for="cantidad">cantidad:</label><input  id="cantidad" name="cantidad"     [(ngModel)]="requerimiento.cantidad"     type="number" placeholder="Cantidad">   <br>
+    <label for="agregar"></label><button id="agregar"  type="submit">Agregar</button>
     
 </form>

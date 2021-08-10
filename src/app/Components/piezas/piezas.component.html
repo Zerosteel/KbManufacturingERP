@@ -1,0 +1,34 @@
+<h1>Piezas</h1>
+<!-- TODO un boton que carga las piezas -->
+<button >Mostrar Piezas</button>
+    <br>
+    <hr>
+    <table *ngIf=" piezas.length > 0">
+        <tr>
+            <th>
+
+            </th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <h2>Agregar pieza</h2>
+    <hr>
+
+    <form class="formaProducto" (ngSubmit)= "guardarPieza()" >
+        <label for="nombreCliente">Cliente:</label><input id="nombreCliente" name="nombreCliente" [(ngModel)]="pieza.nombreCliente" type="text"   placeholder="PCM,ExaColor"> <br>
+        <label for="piezaNum">Pieza:</label><input        id="piezaNum"      name="piezaNum"      [(ngModel)]="pieza.piezaNum"      type="number" placeholder="01910">        <br>
+        <label for="ppb">PPB:</label><input               id="ppb"           name="ppb"           [(ngModel)]="pieza.ppb"           type="number" placeholder="32">           <br>
+        <label for="agregar"></label><button id="agregar" type="submit">Agregar</button>
+    </form>
+    <!-- nombreCliente:string;
+    piezaNum:number;    
+    ppb:number; -->
+
+<!-- TODO un formulario para guardar capturar 
+los datos de una pieza y guardarlos en la base de datos -->

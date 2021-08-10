@@ -51,6 +51,16 @@
     margin:2px;
   }
 
+  .formaProducto{
+    display: inline-block;
+    padding: 5px;
+    border: 2px solid gray;
+    border-radius: 10px;
+}
+
+  label{
+      width:125px;
+  }
    
   /*
   input{

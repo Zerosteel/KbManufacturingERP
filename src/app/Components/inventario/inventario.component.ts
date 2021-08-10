@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import { KbService } from '../../RestService/kb.service';
 import {Inventario} from '../../interfaces/Inventario.interface'
 
@@ -11,6 +11,8 @@ export class InventarioComponent{
     constructor(private kbService:KbService){
     }
 
+
+    //declare const modal: IModal;
     public inventario:Inventario[]=[];
 
     producto:Inventario = {

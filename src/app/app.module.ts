@@ -16,6 +16,7 @@ import { HeaderComponent } from './header/header.component';
 import { ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { RequerimientosComponent } from './Components/requerimientos/requerimientos.component';
 import { OrdenesCompraComponent } from './Components/ordenesCompra/ordenesC.component';
+import { PiezasComponent } from './Components/piezas/piezas.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { OrdenesCompraComponent } from './Components/ordenesCompra/ordenesC.comp
     ClientesComponent,    
     InventarioComponent,
     RequerimientosComponent,
-    OrdenesCompraComponent
+    OrdenesCompraComponent,
+    PiezasComponent
   ],
   imports: [
     BrowserModule,

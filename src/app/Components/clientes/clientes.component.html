@@ -19,18 +19,18 @@
         </tr>
     </table>
 
-    <h2>Agregar producto</h2>
+    <h2>Agregar Cliente</h2>
     <hr>
 
-    <form (ngSubmit) = "guardarCliente()">
+    <form class="formaProducto" (ngSubmit) = "guardarCliente()">
 
-        <input name="nombre"          [(ngModel)]="cliente.nombre"           type="text"   placeholder="nombre">     <br>
-        <input name="rfc"             [(ngModel)]="cliente.rfc"              type="text"   placeholder="rfc"><br>
-        <input name="direccion"       [(ngModel)]="cliente.direccion"        type="text" placeholder="direccion">   <br>
-        <input name="telefono"        [(ngModel)]="cliente.telefono"         type="text" placeholder="telefono">   <br>
-        <input name="contacto"        [(ngModel)]="cliente.contacto"         type="text"   placeholder="contacto"><br>
-        <input name="correo_contacto" [(ngModel)]="cliente.correo_contacto"  type="text"   placeholder="correo de contacto"><br>
-        <button type="submit">Agregar</button>
+        <label for="nombre">nombre:</label><input id ="nombre" name="nombre"          [(ngModel)]="cliente.nombre"           type="text"   placeholder="nombre">     <br>
+        <label for="rfc">rfc:</label><input id ="rfc" name="rfc"             [(ngModel)]="cliente.rfc"              type="text"   placeholder="rfc"><br>
+        <label for="direccion">direccion:</label><input id ="direccion" name="direccion"       [(ngModel)]="cliente.direccion"        type="text" placeholder="direccion">   <br>
+        <label for="telefono">telefono:</label><input id ="telefono" name="telefono"        [(ngModel)]="cliente.telefono"         type="text" placeholder="telefono">   <br>
+        <label for="contacto">contacto:</label><input id ="contacto" name="contacto"        [(ngModel)]="cliente.contacto"         type="text"   placeholder="contacto"><br>
+        <label for="correo_contacto">correo_contacto:</label><input id ="correo_contacto" name="correo_contacto" [(ngModel)]="cliente.correo_contacto"  type="text"   placeholder="correo de contacto"><br>
+        <label for="agregar"></label><button id="agregar" type="submit">Agregar</button>
         
     </form>
 

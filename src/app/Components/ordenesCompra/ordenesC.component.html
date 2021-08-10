@@ -24,19 +24,19 @@
         </tr>
     </table>
 
-    <h2>Agregar producto</h2>
+    <h2>Agregar Orden de Compra</h2>
     <hr>
 
     <form class="formaProducto" (ngSubmit) = "guardarOrden()">
 
         <label for="line">Line:</label><input                        name="line"            id="line"            [(ngModel)]="ordenesCompra.line"            type="number"placeholder="line">             <br>
-        <label for="partNumber">Part Number</label><input            name="partNumber"      id="partNumber"      [(ngModel)]="ordenesCompra.partNumber"      type="number"placeholder="partNumber">       <br>
-        <label for="description">description</label><input           name="description"     id= "description"    [(ngModel)]="ordenesCompra.description"     type="text"  placeholder="description">      <br>
-        <label for="deliveryDateTime">deliveryDateTime</label><input name="deliveryDateTime"id="deliveryDateTime"[(ngModel)]="ordenesCompra.deliveryDateTime"type="text"  placeholder="deliveryDateTime"> <br>
-        <label for="quantity">quantity</label><input                 name="quantity"        id="quantity"        [(ngModel)]="ordenesCompra.quantity"        type="number"placeholder="quantity">         <br>
-        <label for="uom">uom</label><input                           name="uom"             id="uom"             [(ngModel)]="ordenesCompra.uom"             type="text"  placeholder="UOM">              <br>
-        <label for="unitPrice">unitPrice</label><input               name="unitPrice"       id="unitPrice"       [(ngModel)]="ordenesCompra.unitPrice"       type="number"placeholder="unitPrice">        <br>
-        <label for="amount">amount</label><input                     name="amount"          id="amount"          [(ngModel)]="ordenesCompra.amount"          type="number"placeholder="amount">           <br>
-        <label for="">submit</label><button type="submit">Agregar</button>
+        <label for="partNumber">Part Number:</label><input            name="partNumber"      id="partNumber"      [(ngModel)]="ordenesCompra.partNumber"      type="number"placeholder="partNumber">       <br>
+        <label for="description">Description:</label><input           name="description"     id= "description"    [(ngModel)]="ordenesCompra.description"     type="text"  placeholder="description">      <br>
+        <label for="deliveryDateTime">DeliveryDateTime:</label><input name="deliveryDateTime"id="deliveryDateTime"[(ngModel)]="ordenesCompra.deliveryDateTime"type="text"  placeholder="deliveryDateTime"> <br>
+        <label for="quantity">Quantity:</label><input                 name="quantity"        id="quantity"        [(ngModel)]="ordenesCompra.quantity"        type="number"placeholder="quantity">         <br>
+        <label for="uom">UOM:</label><input                           name="uom"             id="uom"             [(ngModel)]="ordenesCompra.uom"             type="text"  placeholder="UOM">              <br>
+        <label for="unitPrice">UnitPrice:</label><input               name="unitPrice"       id="unitPrice"       [(ngModel)]="ordenesCompra.unitPrice"       type="number"placeholder="unitPrice">        <br>
+        <label for="amount">Amount:</label><input                     name="amount"          id="amount"          [(ngModel)]="ordenesCompra.amount"          type="number"placeholder="amount">           <br>
+        <label for="submit">Submit:</label><button id="submit" type="submit">Agregar</button>
         
     </form>

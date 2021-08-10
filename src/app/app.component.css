@@ -1,0 +1,21 @@
+.AppComponent{
+    height:100vh;
+    width:100vw;
+    display:grid; 
+    grid-template-areas:
+    'clock clock clock clock'    
+    'navegacion divisor divisor divisor'
+    'navegacion divisor divisor divisor';   
+}
+
+.Navegacion{
+    grid-area:navegacion;
+}
+
+.Clock{
+    grid-area:clock;
+}
+
+#divisor{
+    grid-area:divisor;
+}
