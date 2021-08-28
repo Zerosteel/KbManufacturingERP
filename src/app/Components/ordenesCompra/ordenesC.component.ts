@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { OrdenesCompra } from "../../interfaces/ordenesC.interface";
 import { KbService } from "../../RestService/kb.service";
 
@@ -8,9 +8,13 @@ import { KbService } from "../../RestService/kb.service";
     styleUrls:['ordenesC.component.css']
     
 })
-export class OrdenesCompraComponent{
+export class OrdenesCompraComponent implements OnInit {  
 
     constructor(private kbService:KbService){
+    }
+
+    ngOnInit():void{
+        this.mostrarOrdenes();
     }
 
     public arrOrdenesCompra:OrdenesCompra[]=[];

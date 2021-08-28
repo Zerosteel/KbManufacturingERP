@@ -1,39 +1,43 @@
-    
-    <h1>Clientes</h1>
-    <button (click)="mostrarClientes()">Mostrar Clientes</button>
-    <br>
-    <hr>
-    <table *ngIf=" clientes.length > 0">
-        <tr>
-            <th *ngFor="let titles of cliente | keyvalue">
-                {{titles.key|titlecase}}
-            </th>
-        </tr>
-        <tr *ngFor="let cli of clientes">
-            <td >{{cli.nombre}}</td>
-            <td >{{cli.rfc}}</td>
-            <td >{{cli.direccion}}</td>
-            <td >{{cli.telefono}}</td>
-            <td >{{cli.contacto}}</td>
-            <td >{{cli.correo_contacto}}</td>
-        </tr>
-    </table>
+<div class="grid-container">        
+    <div class="grid-view grid-item">
+        <h1>Clientes</h1>
+        <button (click)="mostrarClientes()">Mostrar Clientes</button>
+        <br>
+        <hr>
+        <table *ngIf=" clientes.length > 0">
+            <tr>
+                <th *ngFor="let titles of cliente | keyvalue">
+                    {{titles.key|titlecase}}
+                </th>
+            </tr>
+            <tr *ngFor="let cli of clientes">
+                <td >{{cli.nombre}}</td>
+                <td >{{cli.rfc}}</td>
+                <td >{{cli.direccion}}</td>
+                <td >{{cli.telefono}}</td>
+                <td >{{cli.contacto}}</td>
+                <td >{{cli.correo_contacto}}</td>
+            </tr>
+        </table>
+    </div>
 
-    <h2>Agregar Cliente</h2>
-    <hr>
+    <div  class="grid-formulario grid-item">
+        <h2>Agregar Cliente</h2>
+        <hr>
 
-    <form class="formaProducto" (ngSubmit) = "guardarCliente()">
+        <form class="formaProducto" (ngSubmit) = "guardarCliente()">
 
-        <label for="nombre">nombre:</label><input id ="nombre" name="nombre"          [(ngModel)]="cliente.nombre"           type="text"   placeholder="nombre">     <br>
-        <label for="rfc">rfc:</label><input id ="rfc" name="rfc"             [(ngModel)]="cliente.rfc"              type="text"   placeholder="rfc"><br>
-        <label for="direccion">direccion:</label><input id ="direccion" name="direccion"       [(ngModel)]="cliente.direccion"        type="text" placeholder="direccion">   <br>
-        <label for="telefono">telefono:</label><input id ="telefono" name="telefono"        [(ngModel)]="cliente.telefono"         type="text" placeholder="telefono">   <br>
-        <label for="contacto">contacto:</label><input id ="contacto" name="contacto"        [(ngModel)]="cliente.contacto"         type="text"   placeholder="contacto"><br>
-        <label for="correo_contacto">correo_contacto:</label><input id ="correo_contacto" name="correo_contacto" [(ngModel)]="cliente.correo_contacto"  type="text"   placeholder="correo de contacto"><br>
-        <label for="agregar"></label><button id="agregar" type="submit">Agregar</button>
-        
-    </form>
-
+            <label for="nombre">nombre:</label><input id ="nombre" name="nombre"          [(ngModel)]="cliente.nombre"           type="text"   placeholder="nombre">     <br>
+            <label for="rfc">rfc:</label><input id ="rfc" name="rfc"             [(ngModel)]="cliente.rfc"              type="text"   placeholder="rfc"><br>
+            <label for="direccion">direccion:</label><input id ="direccion" name="direccion"       [(ngModel)]="cliente.direccion"        type="text" placeholder="direccion">   <br>
+            <label for="telefono">telefono:</label><input id ="telefono" name="telefono"        [(ngModel)]="cliente.telefono"         type="text" placeholder="telefono">   <br>
+            <label for="contacto">contacto:</label><input id ="contacto" name="contacto"        [(ngModel)]="cliente.contacto"         type="text"   placeholder="contacto"><br>
+            <label for="correo_contacto">correo_contacto:</label><input id ="correo_contacto" name="correo_contacto" [(ngModel)]="cliente.correo_contacto"  type="text"   placeholder="correo de contacto"><br>
+            <label for="agregar"></label><button id="agregar" type="submit">Agregar</button>
+            
+        </form>
+    </div>
+</div>   
    <!--  <button (click)="imprimir()">POST THIS S...</button>
 
     <ul>

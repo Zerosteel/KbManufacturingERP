@@ -4,16 +4,20 @@ import {Inventario} from '../../interfaces/Inventario.interface'
 import { Clientes } from '../../interfaces/clientes.interface';
 
 
-@Component({
+@Component ({
     selector:'app-clientes',
-    templateUrl:'./clientes.component.html'
+    templateUrl:'./clientes.component.html',
+    styleUrls:['/clientes.component.css']
 })
-export class ClientesComponent{
+export class ClientesComponent implements OnInit{
     
     public clientes:Clientes[]=[];
 
     constructor(private kbService:KbService){
        
+    }
+    ngOnInit(): void {
+        this.mostrarClientes();
     }
     
     cliente:Clientes = {

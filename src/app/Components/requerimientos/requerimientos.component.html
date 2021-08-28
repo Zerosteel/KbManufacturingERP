@@ -1,3 +1,5 @@
+<div class="grid-container">        
+    <div class="grid-view grid-item">
 <h1>Requerimientos</h1>
     <button (click)="solicitarRequerimientos()">Mostrar Requerimientos</button>
     <br>
@@ -14,6 +16,9 @@
             <td >{{req.cantidad}}</td>
         </tr>
     </table>
+</div>
+
+<div  class="grid-formulario grid-item">
 <h2>Agregar Requerimiento</h2>
 
 <form class="formaProducto" (ngSubmit) = "guardarRequerimiento()">
@@ -24,3 +29,4 @@
     <label for="agregar"></label><button id="agregar"  type="submit">Agregar</button>
     
 </form>
+</div>

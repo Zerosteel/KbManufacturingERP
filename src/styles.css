@@ -5,6 +5,7 @@
     padding:0px;
   }
   
+
   html, body {
     
     background: white;
@@ -41,28 +42,69 @@
     padding: 1px;
   }
 
-  */ table, th, td {
+  */ 
+
+  @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+  *{
+    font-family: 'Archivo Black', sans-serif;
+    margin:0;
+    padding:0;
+  }
+
+  table{
+    border-radius: 20px;
+  }
+
+  table, th, td {
     border: 1px solid black;
+    border-collapse:collapse;
+    padding:3px;
+    background-color:white;
+    text-align: center;
   } 
   th{
     background-color: cornflowerblue;
+    
   }
-  input{
-    margin:2px;
-  }
+  
+  
 
   .formaProducto{
     display: inline-block;
     padding: 5px;
-    border: 2px solid gray;
-    border-radius: 10px;
+    border: 2px solid black;
+    background-color: white;
 }
 
   label{
-      width:125px;
+    display:inline-block;
+      width:165px;      
   }
    
-  /*
+  
   input{
     margin: 2px;
-  } */
+    height: 1.5rem;
+  } 
+  button{
+    height:2rem;
+    border-radius: 0.5rem;
+    padding:0.5rem;
+    padding-bottom: 1.5rem;
+    box-shadow: -2px -2px  inset gray ; 
+  }
+
+   button:active{
+    box-shadow:  2px 2px inset gray ;
+  } 
+
+  hr{
+    margin: 2px 0;
+  }
+
+  .grid-container{
+    height:100%;
+    width:100%;
+    display:grid;
+    grid-template-rows: 50% 50%;
+}

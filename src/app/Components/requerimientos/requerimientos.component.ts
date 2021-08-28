@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { Requerimientos } from "../../interfaces/requerimientos.interface";
 import { KbService } from "../../RestService/kb.service";
 
@@ -6,12 +6,15 @@ import { KbService } from "../../RestService/kb.service";
     selector:'app-requerimientos',
     templateUrl:'./requerimientos.component.html'
 })
-export class RequerimientosComponent{
+export class RequerimientosComponent implements OnInit{
 
     constructor(private kbService:KbService){
 
     }
 
+    ngOnInit():void{
+        this.solicitarRequerimientos();
+    }
     public requerimientos: Requerimientos[]=[];
 
     requerimiento: Requerimientos={

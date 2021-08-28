@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 
 @Component({
     selector:"app-reloj",
-    template:" <h1>{{HoraExacta}}</h1>"
+    template:" <h1 style='text-align:right; margin-right:2rem'>{{HoraExacta}}</h1>"
 })
 export class RelojComponent implements OnInit{
     ngOnInit(){

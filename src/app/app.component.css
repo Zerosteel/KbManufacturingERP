@@ -2,20 +2,24 @@
     height:100vh;
     width:100vw;
     display:grid; 
-    grid-template-areas:
-    'clock clock clock clock'    
-    'navegacion divisor divisor divisor'
-    'navegacion divisor divisor divisor';   
+    grid-template-columns: 14rem auto;
+    grid-template-rows: 2.4rem auto;
+    
 }
 
-.Navegacion{
-    grid-area:navegacion;
+.Navegacion{        
+    grid-area:2/1/3/2;
+    background: black;
 }
 
 .Clock{
-    grid-area:clock;
+    grid-area:1/1/2/3;
+    background: black;
+    color:white;
 }
 
-#divisor{
-    grid-area:divisor;
+#divisor{    
+    grid-area:2/2/3/3;        
+    background: rgb(186, 240, 235);
+    padding:10px;
 }

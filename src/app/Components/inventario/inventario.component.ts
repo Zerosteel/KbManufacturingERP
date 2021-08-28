@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { KbService } from '../../RestService/kb.service';
 import {Inventario} from '../../interfaces/Inventario.interface'
 
@@ -6,11 +6,14 @@ import {Inventario} from '../../interfaces/Inventario.interface'
     selector:"app-inventario",
     templateUrl:"./inventario.component.html"
 })
-export class InventarioComponent{
+export class InventarioComponent implements OnInit{
     
     constructor(private kbService:KbService){
     }
-
+    
+    ngOnInit():void{
+        this.mostrarInventario();
+    }
 
     //declare const modal: IModal;
     public inventario:Inventario[]=[];

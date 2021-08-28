@@ -1,22 +1,25 @@
+<div class="grid-container">        
+    <div class="grid-view grid-item">
 <h1>Piezas</h1>
 <!-- TODO un boton que carga las piezas -->
-<button >Mostrar Piezas</button>
+<button (click)="mostrarPiezas()" >Mostrar Piezas</button>
     <br>
     <hr>
     <table *ngIf=" piezas.length > 0">
         <tr>
-            <th>
-
+            <th *ngFor="let titles of pieza | keyvalue">
+                {{titles.key|titlecase}}
             </th>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+        <tr *ngFor="let piece of piezas">
+            <td>{{piece.nombreCliente}}</td>
+            <td>{{piece.piezaNum}}</td>
+            <td>{{piece.ppb}}</td>            
         </tr>
     </table>
+</div>
 
+<div  class="grid-formulario grid-item">
     <h2>Agregar pieza</h2>
     <hr>
 
@@ -26,6 +29,7 @@
         <label for="ppb">PPB:</label><input               id="ppb"           name="ppb"           [(ngModel)]="pieza.ppb"           type="number" placeholder="32">           <br>
         <label for="agregar"></label><button id="agregar" type="submit">Agregar</button>
     </form>
+</div>
     <!-- nombreCliente:string;
     piezaNum:number;    
     ppb:number; -->
